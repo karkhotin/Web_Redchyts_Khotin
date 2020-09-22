@@ -1,0 +1,162 @@
+<!DOCKTYPE>
+<html>
+<head>
+
+	<title>Головна сторінка</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+	
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	}
+	th, td {
+	padding: 15px;
+	}
+	.highlight{
+	font-weight: bolder;
+	font-size: 130%;
+	}
+<!-- /* Стиль заголовка */ -->
+header {
+  background-color: #81C0AA;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  background-image: url(img.jpg) 
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color:#FFD0B9;
+}
+.flex-container > div {
+  background-color: #FFC3A7;
+  color: white;
+  width: 130px;
+  margin: 10px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 30px;
+}
+<!-- /* Контейнер для флексбоксов */ -->
+section {
+  display: -webkit-flex;
+  display: flex;
+  
+}
+
+<!-- /* Стиль меню навигации */ -->
+nav {
+  -webkit-flex: 4;
+  -ms-flex: 4;
+  flex: 0.3;
+  background: #76C3A4;
+  padding: 20px;
+}
+
+<!-- /* Стиль списка в меню */ -->
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 1.6em;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+<!-- /* Стиль контента */ -->
+article {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+<!-- /* Стиль раздела footer */ -->
+footer {
+  background-color: #81C0AA;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+<!-- /* Адаптивный макет - меню и содержимое (внутри раздела) располагаются друг над другом, а не рядом друг с другом. */ -->
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+
+  <h2>Сайт</h2>
+  
+</header>
+<div class="flex-container">
+  <div>Розділ 1</div>
+  <div>Розділ 2</div>
+  <div>Розділ 3</div>
+</div>
+<section>
+  <nav>
+    <ul>
+	  <li><a href="#"> Про нас</a></li>
+      <li><a href="functional.html">Бізнес-логіка</a></li>
+      <li><a href="#">Реклама</a></li>
+      
+    </ul>
+  </nav>
+
+  <article>
+	<table>
+	<caption> <span class = "highlight">Сценарії</span></caption>
+	<tr>
+		<th>Назва</th>
+		<th>Опис</th>
+		<th>Посилання</th>
+	</tr>
+	<tr>
+		<th>Онлайн заходи тиждня</th>
+		<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+		<td> <a href="#">13</a></td>
+	</tr>
+	<tr>
+		<th>Реєстрація в системі</th>
+		<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+		<td> <a href="#">23</a></td>
+	</tr>
+    <tr>
+		<th>Hello World</th>
+		<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+		<td> <a href="#">33</a> </td>
+	</tr>
+</table>
+ </article>
+</section>
+
+<footer>
+        <h3>Підписатися на розсилку</h3>
+        <form id="subscribe" method="post" >
+                <input type="text" placeholder="Введіть e-mail" value="" name="email">
+                <input type="submit" value="Підписатися" id="subscribe_submit" name="submit">
+        </form>
+</footer>
+
+</body>
+
+</html>
+</!DOCKTYPE>
