@@ -1,0 +1,252 @@
+<!DOCKTYPE>
+<html>
+<head>
+
+	<title>Головна сторінка</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="table.css" type="text/css"/>
+	<style>
+/*ідентифікатори */
+#opa { 
+    border: 1px solid #666; /* Параметры рамки */
+    background: #ccccff; /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+   }
+
+/*селектори сусідні */
+i {
+    color: #f5f5dc;
+   }
+/*селектори дочірні */
+h3>b { color: white; }
+		h3>i { color: white; }
+/*селектори універсальні */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+} 
+* {
+  box-sizing: border-box;
+}
+/*селектор атрибутів */
+   A[target="_blank"] { 
+    background: url(images/blank.png) 0 6px no-repeat; /* Параметры фонового рисунка */
+    padding-left: 15px; /* Смещаем текст вправо */
+   }
+
+
+
+img {
+    vertical-align: middle;
+    background-color: #e8e8e8;
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.alignnone {
+    float: none;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+/*селектор тегів  */
+th {
+	font-family: Geneva, Arial, sans-serif;
+	color: gray;
+}
+<!-- /* Стиль заголовка */ -->
+header {
+  background-color: #81C0AA;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+<!-- /* Селектор класа */ -->
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  float: center;/* плаваючі елементи*/
+  background-color:#FFD0B9;
+}
+.flex-container > div {
+  background-color: #FFC3A7;
+  color: white;
+  width: 130px;
+  margin: 10px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 30px;
+}
+<!-- /* Контейнер для флексбоксов */ -->
+section {
+  display: -webkit-flex;
+  display: flex;
+  
+}
+
+<!-- /* Стиль меню навигации */ -->
+nav {
+  -webkit-flex: 4;
+  -ms-flex: 4;
+  flex: 0.3;
+  background: #76C3A4;
+  padding: 20px;
+}
+
+<!-- /* Стиль списка в меню */ -->
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 1.6em;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+<!-- /* Стиль контента */ -->
+article {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+<!-- /* Стиль раздела footer */ -->
+footer {
+  background-color: #81C0AA;
+  padding: 2px;
+  text-align: center;
+  margin: 5px; /* Отступы */
+  color: white;
+}
+
+<!-- /* Адаптивный макет - меню и содержимое (внутри раздела) располагаются друг над другом, а не рядом друг с другом. */ -->
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 0 0; /* Отступы вокруг фотографии */
+   }
+</style>
+</head>
+<body>
+<header>
+ <img src="12.jpg" alt="Иллюстрация" width="230" height="150" class="rightpic">
+ <h4>  
+КПІ ІНФО 
+</h4>
+  <h1>                                </h1>
+ </header>
+<div class="flex-container">
+  <div>Розділ 1</div>
+  <div>Розділ 2</div>
+  <div>Розділ 3</div>
+</div>
+<section>
+  <nav>
+    <ul>
+	  <li id="opa"><a href="#"> Про нас</a></li>
+      <li id="opa"><a href="functional.html">Бізнес-логіка</a></li>
+      <li id="opa"><a href="#">Реклама</a></li>
+      
+    </ul>
+  </nav>
+
+  <article>
+  <main class="main columns">
+  <section class="column main-column">
+    <a class="article first-article" href="#">
+      <figure class="article-image is-4by3">
+        <img src="13.jpg" alt="">
+      </figure>
+      <div class="article-body">
+        <h2 class="article-title">
+          Привіт дистанційка!
+        </h2>
+        <p class="article-content">
+          Процес дистанційного навчання у КПІ ім. Ігоря Сікорського щораз удосконалюють. Останній апдейт стосується формування та заповнення відомостей, в яких фіксуються результати семестрового контролю.
+
+Раніше викладачі заповнювали усі відомості у паперовому вигляді та відносили до деканатів, де оцінки вручну заносились працівниками до системи АС «Деканат». Тепер процес значно спростився: представники деканатів формують електронні відомості в системі «Електронний кампус», після чого відомості відображаються в модулі «Сесія» в особистих кабінетах тих викладачів, які здійснюють семестровий контроль. Після проведення заліку чи екзамену викладач заповнює е-відомість, зберігає дані і вони вже є доступними для працівників деканату. Передача даних між двома системами «Електронний кампус» та АС «Деканат» буде здійснюватись автоматично. Такий механізм не тільки полегшує життя викладачам, а й дає можливість не змінювати графік проведення семестрового контролю навіть в умовах карантину.
+«Це допоможе витримати терміни проведення заліків та екзаменів, які заплановані за графіком», - пояснює керівник відділу навчально-виховної роботи ДНВР Тетяна Хижняк.
+
+Оновлення успішно протестували й застосували на заліковій сесії студентів 3-го курсу (скорочений термін навчання, вступ після технікумів/коледжів) та 4-го курсу – відомості по заліках, курсових роботах/проектах вже надійшли до деканатів. Фахівці «Електронного кампуса» розробляють можливість автоматичного відображення результатів іспитів та заліків в особистому кабінеті студента – так само, як там відображаються результати поточного контролю з дисциплін.
+
+Функцію електронного заповнення відомостей планують застосовувати не лише у період дистанційного навчання, а й надалі.
+        </p>
+        <footer class="article-info">
+          <span><i>Автор ...</i></span>
+          <span>0 коментарів</span>
+        </footer>
+      </div>
+    </a>
+
+    
+  </section>
+
+  <section class="column">
+    <a class="article" href="#">
+      <figure class="article-image is-3by2">
+        <img src="17.jpg" alt="">
+      </figure>
+      <div class="article-body">
+        <h2 class="article-title">
+          Онлайн заходи тижня
+        </h2>
+        <p class="article-content">Нещодавно за участю бібліотеки було проведено засідання філософського клубу "Гармата", вебінар платформи Єднання "Онлайн-практики для створення, управління та розвитку вашої команди"...
+        </p>
+        <footer class="article-info">
+          <span><i>Автор ...</i></span>
+          <span>0 коментарів</span>
+        </footer>
+      </div>
+    </a>
+    <a class="article" href="#">
+  <figure class="article-image is-3by2">
+        <img src="15.jpg" alt="">
+      </figure>
+      <div class="article-body">
+        <h2 class="article-title">
+          Програмісти створили мобільний додаток з екскурсіями-квестами по містах України
+        </h2>
+        <p class="article-content">
+          В Україні створили мобільний додаток, який сам складає екскурсійні маршрути відповідно до зацікавлень людини та її вільного часу. Про це повідомляє The Village.
+Мобільний додаток з екскурсіями-іграми називається WalQlike. 
+        </p>
+        <footer class="article-info">
+          <span><i>Автор ...</i></span>
+          <span>0 коментарів</span>
+        </footer>
+      </div>
+    </a>
+    
+
+  </article>
+</section>
+
+<footer>
+        <h3><b>Підписатися на </b><i>розсилку</i></h3>
+        <form id="subscribe" method="post" >
+                <input type="text" placeholder="Введіть e-mail" value="" name="email">
+                <input type="submit" value="Підписатися" id="subscribe_submit" name="submit">
+        </form>
+</footer>
+
+</body>
+
+</html>
+</!DOCKTYPE>
