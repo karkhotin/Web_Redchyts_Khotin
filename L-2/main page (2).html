@@ -12,71 +12,40 @@
     background: #ccccff; /* Цвет фона */
     padding: 5px; /* Поля вокруг текста */
    }
-
-/*селектори сусідні */
-i {
-    color: #f5f5dc;
-   }
 /*селектори дочірні */
 h3>b { color: white; }
 		h3>i { color: white; }
 /*селектори універсальні */
-* {
+*{
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: bord-box;
 } 
-* {
-  box-sizing: border-box;
-}
 /*селектор атрибутів */
    A[target="_blank"] { 
     background: url(images/blank.png) 0 6px no-repeat; /* Параметры фонового рисунка */
     padding-left: 15px; /* Смещаем текст вправо */
    }
-
-
-
-img {
-    vertical-align: middle;
-    background-color: #e8e8e8;
-    padding: 5px;
-    border: 1px solid #aaa;
-}
-.alignleft {
-    float: left;
-    margin-right: 15px;
-}
-.alignright {
-    float: right;
-    margin-left: 15px;
-}
-.alignnone {
-    float: none;
-    margin-right: 15px;
-    margin-bottom: 10px;
-}
-
-
-
 /*селектор тегів  */
 th {
 	font-family: Geneva, Arial, sans-serif;
 	color: gray;
 }
-<!-- /* Стиль заголовка */ -->
+/*Гумовий тип макету за допомогою Flexbox*/
 header {
   background-color: #81C0AA;
-  padding: 30px;
+  padding: 1em;
   text-align: center;
   font-size: 35px;
   color: white;
 }
-<!-- /* Селектор класа */ -->
+/*розмістити горизонтально розділи*/
 .flex-container {
   display: flex;
   flex-direction: row;
   float: center;/* плаваючі елементи*/
   background-color:#FFD0B9;
 }
+/*розмістити горизонтально посилання на розділи*/
 .flex-container > div {
   background-color: #FFC3A7;
   color: white;
@@ -86,23 +55,17 @@ header {
   line-height: 35px;
   font-size: 30px;
 }
-<!-- /* Контейнер для флексбоксов */ -->
+/*контейнер для флексбоксів*/
 section {
-  display: -webkit-flex;
   display: flex;
-  
 }
-
-<!-- /* Стиль меню навигации */ -->
+/*флексбокс навігації, надаеться 0.3 частина від 2.3 розміру вікна браузера*/
 nav {
-  -webkit-flex: 4;
-  -ms-flex: 4;
   flex: 0.3;
   background: #76C3A4;
   padding: 20px;
 }
-
-<!-- /* Стиль списка в меню */ -->
+/*розміщення звурху вниз розділів навігації*/
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -112,31 +75,18 @@ nav ul {
   line-height: 1.7;
   font-weight: bold;
 }
-
-<!-- /* Стиль контента */ -->
+/*флексбокс контенту, надаеться 2 частина від 2.3 розміру вікна браузера*/
 article {
-  -webkit-flex: 2;
-  -ms-flex: 2;
   flex: 2;
   background-color: #f1f1f1;
   padding: 10px;
 }
-
-<!-- /* Стиль раздела footer */ -->
 footer {
   background-color: #81C0AA;
   padding: 2px;
   text-align: center;
-  margin: 5px; /* Отступы */
+  margin: 5px; /* Відступи */
   color: white;
-}
-
-<!-- /* Адаптивный макет - меню и содержимое (внутри раздела) располагаются друг над другом, а не рядом друг с другом. */ -->
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
 }
 .rightpic {
     float: right; /* Выравнивание по правому краю */
@@ -146,7 +96,7 @@ footer {
 </head>
 <body>
 <header>
- <img src="12.jpg" alt="Иллюстрация" width="230" height="150" class="rightpic">
+ <img src="12.jpg" alt="Иллюстрация" width="230" height="120" class="rightpic">
  <h4>  
 КПІ ІНФО 
 </h4>
@@ -161,7 +111,7 @@ footer {
   <nav>
     <ul>
 	  <li id="opa"><a href="#"> Про нас</a></li>
-      <li id="opa"><a href="functional.html">Бізнес-логіка</a></li>
+      <li id="opa"><a href="#">Контакти</a></li>
       <li id="opa"><a href="#">Реклама</a></li>
       
     </ul>
@@ -171,7 +121,7 @@ footer {
   <main class="main columns">
   <section class="column main-column">
     <a class="article first-article" href="#">
-      <figure class="article-image is-4by3">
+      <figure class="article-image img">
         <img src="13.jpg" alt="">
       </figure>
       <div class="article-body">
@@ -200,7 +150,7 @@ footer {
 
   <section class="column">
     <a class="article" href="#">
-      <figure class="article-image is-3by2">
+      <figure class="article-image other">
         <img src="17.jpg" alt="">
       </figure>
       <div class="article-body">
@@ -216,7 +166,7 @@ footer {
       </div>
     </a>
     <a class="article" href="#">
-  <figure class="article-image is-3by2">
+  <figure class="article-image other">
         <img src="15.jpg" alt="">
       </figure>
       <div class="article-body">
@@ -233,18 +183,17 @@ footer {
         </footer>
       </div>
     </a>
-    
 
   </article>
 </section>
-
-<footer>
+  <footer>
         <h3><b>Підписатися на </b><i>розсилку</i></h3>
         <form id="subscribe" method="post" >
                 <input type="text" placeholder="Введіть e-mail" value="" name="email">
                 <input type="submit" value="Підписатися" id="subscribe_submit" name="submit">
         </form>
 </footer>
+
 
 </body>
 
