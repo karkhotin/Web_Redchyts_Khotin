@@ -1,0 +1,237 @@
+<style>
+ .rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    
+   }
+ 
+/*ідентифікатори */
+#opa { 
+    border: 1px solid #666; /* Параметры рамки */
+    background: #ccccff; /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+   }
+
+/*селектори сусідні */
+ b + i {
+    color: lilac; 
+   }
+
+/*селектори дочірні */
+h3>b { color: white; }
+		h3>i { color: white; }
+
+* {
+  box-sizing: border-box;
+}
+  /*селектор атрибутів */
+   A[target="_blank"] { 
+    background: url(images/blank.png) 0 6px no-repeat; /* Параметры фонового рисунка */
+    padding-left: 15px; /* Смещаем текст вправо */
+   }
+
+
+
+img {
+    vertical-align: middle;
+    background-color: #e8e8e8;
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.alignnone {
+    float: none;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+/*селектори універсальні */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+} 
+a {
+  text-decoration: none;
+}
+
+div, h2, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 20px;
+}
+
+.columns {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.main-column {
+  flex: 2;
+}
+
+.article {
+  background: white;
+  color: #666;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-basis: auto;
+  margin: 10px;
+}
+
+.article-image {
+  background: #eee;
+  display: block;
+  padding-top: 75%;
+  position: relative;
+  width: 100%;
+}
+
+.article-image img {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.article-image.is-3by2 {
+  padding-top: 66.6666%;
+}
+
+.article-image.is-16by9 {
+  padding-top: 56.25%;
+}
+
+.article-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.article-title {
+  color: #333;
+  flex-shrink: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.article-content {
+  flex: 1;
+  margin-top: 5px;
+}
+
+.article-info {
+  display: flex;
+  font-size: 0.85em;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
+/*селектор тегів  */
+th {
+	font-family: Geneva, Arial, sans-serif;
+	color: gray;
+}
+<!-- /* Стиль заголовка */ -->
+header {
+  background-color: #81C0AA;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  background-image: url(img.jpg) 
+}
+
+<!-- /* Селектор класа */ -->
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  float: center;/* плаваючі елементи*/
+  background-color:#FFD0B9;
+}
+.flex-container > div {
+  background-color: #FFC3A7;
+  color: white;
+  width: 350px;
+  margin: 10px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 30px;
+}
+<!-- /* Контейнер для флексбоксов */ -->
+section {
+  display: -webkit-flex;
+  display: flex;
+  
+}
+
+<!-- /* Стиль меню навигации */ -->
+nav {
+  -webkit-flex: 4;
+  -ms-flex: 4;
+  flex: 0.3;
+  background: #76C3A4;
+  padding: 20px;
+}
+
+<!-- /* Стиль списка в меню */ -->
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 1.6em;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+<!-- /* Стиль контента */ -->
+article {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+<!-- /* Стиль раздела footer */ -->
+footer {
+  background-color: #81C0AA;
+  padding: 10px;
+  text-align: center;
+  margin: 0; /* Отступы */
+  color: white;
+}
+
+<!-- /* Адаптивный макет - меню и содержимое (внутри раздела) располагаются друг над другом, а не рядом друг с другом. */ -->
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+ .rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 300px 300px; /* Отступы вокруг фотографии */
+   }
+</style>

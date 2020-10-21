@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,800);
+body {
+font-family: 'Open Sans', sans-serif;
+}
+.jumbotron {
+  padding: 0 0 20px;
+  font-family: 'Inconsolata', monospace ;
+}
+.btn-succes {
+  background-color: #FFC3A7;
+  color: white;
+  font-size: 18px;
+  margin: 5px;
+  margin-top: 30px;
+  padding: 6px;
+}
+
+.btn-succes, .btn-succes {
+
+}
+
+.btn {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+:focus {
+  outline: none;
+}
+
+img {
+  margin-top: 30px
+}
