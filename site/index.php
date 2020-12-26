@@ -1,3 +1,4 @@
+
 <!DOCKTYPE>
 <html>
 <head>
@@ -27,7 +28,7 @@ document.body.innerHTML = "<h4 > Час: " + d.getHours()
 
 <header>
  <h4>   <img src="12.jpg" alt="Иллюстрация" 
-style="position:absolute;top:35px;right:0px width="300" height="190" class="rightpic">
+style="position:absolute;top:15px;right:0px width="300" height="170" class="rightpic"> 
 <script type="text/javascript">
 i=0;
 dt=new Array("white", "A00000", "00A000", "00A0A0", "A000A0", "A0A000");
@@ -65,14 +66,21 @@ cl();	// первый вызов размещаю после определен�
             <li>
               <a href="#">Їжа</a>
             </li>
+			
 			 </ul>
-        </li>
+
         <li>
           <a href="#" >Текстовий редактор</a>
         </li>
+	
 		<li>
-          <a href="#">Онлайн курси</a>
+          <a href="forma.html">Форма зворотнього зв*зку</a>
         </li>
+		<li>
+          <a href="table.php">Ресурси</a>
+        </li>
+	
+		
       </ul>
 	  </nav>
 	  </div>
@@ -102,8 +110,44 @@ function mOut(obj) {
 </script>
   <div> <a href="editor.html" style = "color: white;">Створення статті</a></div>
   <div>Розділ 3</div> --> 
+  <a href="?lang=fr "><img src="France-Flag.png" style = "background-color:  #81C0AA; position:absolute;top:10px;left:10px "></a>
+<a href="?lang=da "><img src="Denmark-Flag.png" style = "background-color:  #81C0AA; position:absolute;top:10px;left:55px"></a>
+<a href="?lang=it "><img src="Italy-Flag.png" style = "background-color:  #81C0AA; position:absolute;top:10px;left:100px"></a>
+<a href="?lang=de "><img src="Germany-Flag.png" style = "background-color:  #81C0AA; position:absolute;top:10px;left:145px"></a>
+
+  <?php
+	function setLang(){
+		if(isset($_GET['lang'])){
+			$lang = $_GET['lang'];
+		}
+		else{		$lang = "de";}
+		setcookie ( 'language', $lang, time() + 60*60*24*182, '/','localhost');
+		if($_COOKIE['language'] == "fr"){
+			echo "<p style='position:absolute;top:60px;left:10px; font-size: 14pt;'> Langue choisie: français</p>";
+		}
+		if($_COOKIE['language'] == "da"){
+			echo "<p style='position:absolute;top:60px;left:10px; font-size: 14pt;'> Valgt sprog: dansk</p>";
+		}
+		if($_COOKIE['language'] == "it"){
+			echo "<p style='position:absolute;top:60px;left:10px; font-size: 14pt;'> Lingua selezionata: italiano</p>";
+		}
+		if($_COOKIE['language'] == "de"){
+			echo "<p style='position:absolute;top:60px;left:10px; font-size: 14pt;'> Ausgewählte Sprache: Deutsch</p>";
+		}
+	}
+	setLang();
+?>
+<div style="position: absolute; top:100px; left: 10px">
+<form method="post" action="auto.php">
+   <p style='font-size: 14pt;'>Логін<input type = "text" name = "login" value="<?php    if(isset($_SESSION["login"])){echo $_SESSION["login"];}?>" width="80px"></p>
+    <p style='font-size: 14pt;'>Пароль<input type = "password" name = "passwd" value="<?php    if(isset($_SESSION["passwrd"])){echo $_SESSION["passwrd"];}?>" width="30px"></p>
+    <Input  class = "sub" type = "submit" name = "go" value = "Зайти" style="  position:relative; float:left;width:80px;margin-top:10px;background:#3498db;color:#fff;font-weight:400;text-shadow:1px 1px 0px #2d7baf;box-shadow:0px 3px 0px #2d7baf;">
+  </form> 
+ </div> 
 <section>
+
   <nav>
+  
 <!-- clock widget start -->
 <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","//s.bookcdn.com//css/cl/bw-cl-120x45.css"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> <div id="tw_5_1660190373">
 <div style="width:130px; height:45px; margin: 0 auto;"><a href="https://hotelmix.com.ua/time/kiev-18881">Київ</a><br/></div>
