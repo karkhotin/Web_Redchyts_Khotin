@@ -1,0 +1,45 @@
+<!DOCTYPE html> <html> 
+<!-- Служебная часть --> 
+<head> 
+<!-- Заголовок страницы --> 
+<title>Заголовок</title> 
+<!-- Настраиваем служебную информацию для браузеров --> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+ <style type="text/css"> 
+ /*Задаём общие параметры для всей страницы: шрифт и отступы*/
+ body { 
+ /*text-align: center;*/ 
+ margin: 10; 
+ font-family: Verdana, Arial, sans-serif; 
+ font-size: 16px; }
+ /* Настраиваем внешний вид полей ввода*/ 
+ input { 
+ display: inline-block; 
+ margin: 10px auto; 
+ border: 2px solid #eee; 
+ padding: 10px 20px; 
+ font-family: Verdana, Arial, sans-serif;
+ font-size: 16px; }
+ textarea { 
+ display: inline-block;
+ margin: 10px auto; 
+ border: 2px solid #eee; 
+ padding: 10px 20px; 
+ font-family: Verdana, Arial, sans-serif; font-size: 16px;
+ }
+ </style>
+ <!-- Закрываем служебную часть страницы --> 
+ </head> 
+ <body> 
+ <form action="post1.php" method="post">
+
+Ваше имя <input type="text" name="first_name"><br>
+Email: <input type="text" name="email" required placeholder="Обязательное поле"><br>
+Сообщение:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+ </body> 
+ <!-- Конец всей страницы --> 
+ </html>
